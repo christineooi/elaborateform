@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Elaborate Form</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <form action="http://localhost:3000" method="post">
+        <fieldset>
+            <legend>Contact Info</legend>
+            <div class="info">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" autofocus/>
+            </div>
+            <div class="info">
+                <label for="email_address">Email:</label>
+                <input type="email" id="email_address" name="user_email"/>
+            </div>
+            <div class="info">
+                <label for="cell_phone">Cell Phone:</label>
+                <input type="tel" id="cell_phone" name="user_cell"/>
+            </div>
+            <div class="info">
+                <label for="homepage">Homepage:</label>
+                <input type="url" id="homepage" name="user_homepage"/>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Preferred Method of Communication</legend>
+                <div class="radio_method">
+                    <input type="radio" checked id="email" name="communication_method" value="email"/>
+                    <label for="email">E-Mail</label>
+                    <input type="radio" id="cell" name="communication_method" value="cell"/>
+                    <label for="cell">Cell Phone</label>
+                </div>
+                <div>
+                    <label for="best_time">Best Time to Reach You:</label>
+                    <input type="time" name="best_time" id="best_time"/>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>Devices that you use</legend>
+            <div class="check">
+                <input type="checkbox" checked id="ios" name="ios" value="ios"/>
+                <label for="ios">iOS (iPhone/iPad)</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="andriod" name="andriod" value="andriod"/>
+                <label for="andriod">Andriod</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="mac" name="mac" value="mac"/>
+                <label for="mac">Mac</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="windows" name="windows" value="windows"/>
+                <label for="windows">Windows</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="chrome" name="chrome" value="chrome"/> 
+                <label for="chrome">Chrome OS (Chromebook)</label>   
+            </div>
+            <div class="check">
+                <input type="checkbox" id="linux" name="linux" value="linux"/>
+                <label for="linux">Linux</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Inquiry</legend>
+            <div>
+                <label for="inquiry_type">What is your inquiry about?</label>
+                <select id="inquiry_type" name="inquiry_type">
+                    <option selected>Provide Feedback</option>
+                    <option>Ask a Question</option>
+                    <option>Report an Issue</option>
+                </select>
+            </div>
+            <div>
+                <label for="plan">Your Plan</label>
+                <input type="text" id="plan" name="plan" value="Premium Subscriber" disabled/>
+            </div>
+            <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message">Message here</textarea>
+            </div>
+            <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+        </fieldset>
+            <div class="buttonDiv">
+                <button class="button" type="submit">Send your Message</button>
+                <button class="button" type="reset">Reset</button>
+            </div>
+        
+    </form>
+  </body>
+</html>
